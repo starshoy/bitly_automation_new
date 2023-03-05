@@ -15,6 +15,14 @@ Use `pip` (or `pip3`, if there is a conflict with Python2) to install dependenci
 pip install -r requirements.txt
 ```
 
+### How to use
+
+To run the script url should be passed as additional argument in terminal
+```commandline
+$ python main.py http://google.com 
+```
+
+
 ### Project Goals
 
 This code was written for educational purposes as part of an online course for web developers at [dvmn.org](https://dvmn.org/).
