@@ -2,7 +2,7 @@
 
 Project is aimed to give user an ability to:
 - make shorten links via Bitly Url service
-- decode shorten Bitly links
+- to get the bitly link statistics
 
 ### How to install
 
@@ -18,10 +18,15 @@ pip install -r requirements.txt
 ### How to use
 
 To run the script url should be passed as additional argument in terminal
+
+- To make a short link 
 ```commandline
 $ python main.py http://google.com 
 ```
-
+- To get a bitly link statistics 
+```commandline
+$ python main.py https://bit.ly/3EkIOz8
+```
 
 ### Project Goals
 
