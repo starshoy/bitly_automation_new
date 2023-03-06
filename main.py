@@ -32,13 +32,6 @@ def is_bitlink(link, token):
 
     response = requests.get(url=url, headers=headers)
     return response.ok
-
-
-def input_url(): 
-    url = input("Введите ссылку: ")
-    if not validators.url(url):
-      raise TypeError("Invalid url. Please check it was type in a proper way")
-    return url
   
 
 def count_clicks(link, token):
@@ -62,6 +55,8 @@ def main():
     bitly_token = os.environ["BITLY_OAUTH_TOKEN"]
   
     link = args.url
+    if not validators.url(link):
+      raise TypeError("Invalid url. Please check it was type in a proper way")
     
     if is_bitlink(link=link, token=bitly_token):
         print(f"По вашей ссылке прошли: {count_clicks(link=link, token=bitly_token)} раз(а)")
